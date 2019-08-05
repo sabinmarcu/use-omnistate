@@ -1,0 +1,19 @@
+{
+  "name": "use-omnistate-context-generator",
+  "version": "0.1.0",
+  "author": "Sabin Marcu <sabinmarcu@gmail.com>",
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:dev": "jest --watch --notify",
+    "lint": "eslint src",
+    "flow": "flow src",
+    "precommit": "yarn lint && yarn flow && yarn test",
+    "prepublishOnly": "yarn clean && yarn precommit && yarn build"
+  },
+  "private": false,
+  "dependencies": {
+    "react": "^16.8.6"
+  }
+}
