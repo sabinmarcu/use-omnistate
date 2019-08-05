@@ -4,9 +4,13 @@ module.exports = {
   parser: "babel-eslint",
   extends: [
     "airbnb",
+    "plugin:jest/recommended",
     "plugin:flowtype/recommended",
   ],
-  plugins: ["flowtype"],
+  plugins: [
+    "jest",
+    "flowtype"
+  ],
   env: {
     browser: true,
     node: true,
@@ -25,6 +29,7 @@ module.exports = {
   },
   rules: {
     'react/prop-types': 0,
-    'react/require-default-props': [0]
+    'react/jsx-filename-extension': 0,
+    'react/require-default-props': 0
   },
 };
